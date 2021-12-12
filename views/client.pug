@@ -1,0 +1,50 @@
+html     
+    head 
+        style 
+            include ../public/css/login.css
+        title Simple application for get data
+    body        
+        div(class="login-form")
+            h1 Login/Register
+            form(action="", method="post")
+                label(for="username") Username:
+                input(type="text", id="username", name="username", required) 
+                label(for="password") Password:
+                input(type="password", id="password", name="password", required)          
+                
+                .container.space-around
+                    div
+                    input(type="button", id="btnLogin", value="Login")
+                    p(style='color:white;') ok
+                    div 
+                    input(type="button", id="btnRegister", value="Register")
+
+                    
+                
+                
+
+        div(class="content-form")
+            input(type="button", id="btnLogout", value="Logout", style="display:none") 
+        div(id="content")
+        br
+        hr
+        br
+        h3 Ranjivosti
+        label.switch Nesigurna pohrana osjetljivih podataka
+        input.store(type='checkbox' ,checked,id="store")
+        span.slider.round
+
+        br
+        br
+        br 
+        hr
+        hr
+        h3 Sadržaj baze podataka
+        div(id="content2")
+
+
+        script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js") 
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js' integrity='sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=' crossorigin='anonymous')
+        script 
+            include ../public/js/site.js
+            
